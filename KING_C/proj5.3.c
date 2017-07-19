@@ -15,14 +15,15 @@ int main(void)
    float commission, value;
 
    float rivalCommission;
-   float numberOfShares, pricePerShare;
+   int numberOfShares;
+   float pricePerShare;
 
    printf("Enter the number of shares: ");
-   scanf("%f", &numberOfShares);
+   scanf("%d", &numberOfShares);
    printf("Enter the price per share: ");
    scanf("%f", &pricePerShare);
 
-   value = numberOfShares * pricePerShare;
+   value = (float)numberOfShares * pricePerShare;
 
    if (value < 2500.00f)
       commission = 30.00f + .017f * value;
